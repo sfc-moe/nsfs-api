@@ -60,4 +60,4 @@ jobs:
           POSTGRES_USER: myapp
           POSTGRES_DB: myapp_test
           POSTGRES_PASSWORD: myapp_test
-        run: bundle exec rspec
+        run: bundle exec rails test
