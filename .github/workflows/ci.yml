@@ -51,7 +51,7 @@ jobs:
           POSTGRES_DB: myapp_test
           POSTGRES_PASSWORD: myapp_test
         run: |
-          bin/rails db:setup
+          bin/rails db:migrate
       - name: Run tests
         env:
           RAILS_ENV: test
