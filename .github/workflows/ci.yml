@@ -18,7 +18,6 @@ jobs:
       - name: Run security checks
         run: |
           bin/bundler-audit --update
-
   tests:
     name: Tests
     runs-on: ubuntu-latest
