@@ -46,11 +46,18 @@ jobs:
         env:
           RAILS_ENV: test
           POSTGRES_HOST: postgres
-          POSTGRES_PORT: 5432
+          POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
           POSTGRES_USER: myapp
           POSTGRES_DB: myapp_test
           POSTGRES_PASSWORD: myapp_test
         run: |
           bin/rails db:setup
       - name: Run tests
+        env:
+          RAILS_ENV: test
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
+          POSTGRES_USER: myapp
+          POSTGRES_DB: myapp_test
+          POSTGRES_PASSWORD: myapp_test
         run: bundle exec rspec
