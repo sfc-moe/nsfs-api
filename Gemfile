@@ -25,6 +25,7 @@ gem 'puma', '~> 5.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rubocop', '~> 1.13', require: false
 gem 'rubocop-rails', require: false
+
 gem 'bundler-audit'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
