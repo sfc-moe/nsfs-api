@@ -19,10 +19,10 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: <% POSTGRES_DB =%>
+  database: <%= ENV['POSTGRES_DB'] %>
   pool: 5
-  username: <% POSTGRES_USER =%>
-  password: <% POSTGRES_PASSWORD =%>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 production:
   <<: *default
